@@ -42,13 +42,13 @@ Con estos ejercicios aprendimos a:
 
 -   **Pieza escalonada**
 
-    ![Croquis de la pieza escalonada](img/solidworks_escalera.jpeg)
+    ![Croquis de la pieza escalonada](./pruevas/escalera.jpeg)
 
     *Croquis de la pieza escalonada realizado en SOLIDWORKS.*
 
 -   **Pieza terminada**
 
-    ![Pieza modelada en SOLIDWORKS](img/solidworks_pieza.jpeg)
+    ![Pieza modelada en SOLIDWORKS](./pieza rara/escalera.jpeg)
 
     *Modelo tridimensional de una de las piezas realizadas.*
 
@@ -79,13 +79,13 @@ Los **guantes y el mandil** ayudan a proteger las manos y el cuerpo contra part�
 
 -   **Equipo de protección personal**
 
-    ![Equipo de protección](img/equipo_personal.jpeg)
+    ![Equipo de protección](./pruevas/mesa rara.jpeg)
 
     *Uso del equipo de protección personal para realizar trabajos de soldadura.*
 
 -   **Careta, guantes y mandil**
 
-    ![Equipo de soldadura](img/equipo_soldadura.jpeg)
+    ![Equipo de soldadura](./pruevas/señorraro.jpeg)
 
     *Equipo utilizado durante la práctica.*
 
@@ -101,7 +101,7 @@ Este equipo permite generar el calor necesario para unir materiales metálicos. 
 
 El uso de esta máquina requiere utilizar correctamente el equipo de protección debido a las chispas, el calor y la intensa luz generada durante el proceso.
 
-![Máquina de soldar](img/maquina_soldar.jpeg)
+![Máquina de soldar](./pruevas/maquinarara.jpeg)
 
 *Máquina de soldar utilizada durante la práctica.*
 
@@ -117,7 +117,7 @@ Antes de realizar un corte, el material debe quedar correctamente sujetado en la
 
 También es necesario utilizar el equipo de protección adecuado, ya que durante el corte pueden producirse chispas y pequeñas partículas de material.
 
-![Sierra sensitiva para metal](img/tronzadora.jpeg)
+---
 
 *Sierra sensitiva o tronzadora utilizada para cortar metal.*
 
@@ -157,19 +157,11 @@ El procedimiento que seguimos fue:
 
 -   **Cara del cubo**
 
-    ![Cara del cubo](img/cubo_2.jpeg)
+    ![Cara del cubo](./pruevas/parte1.jpeg)
 
-    *Modelo de una de las caras con pestañas.*
+--   **Pieza terminada**
 
--   **Medidas**
-
-    ![Medidas de la pieza](img/cubo_3.jpeg)
-
-    *Croquis y medidas utilizadas para crear las pestañas.*
-
--   **Pieza terminada**
-
-    ![Pieza terminada](img/cubo_4.jpeg)
+    ![Pieza terminada](./pruevas/armado.jpeg)
 
     *Resultado de una de las caras después del modelado.*
 
@@ -183,7 +175,7 @@ Después de terminar las piezas se utilizaron las herramientas de ensamblaje de 
 
 Las pestañas y los cortes permiten que las caras coincidan entre sí para formar finalmente el cubo.
 
-![Ensamble del cubo](img/cubo_5.jpeg)
+![Ensamble del cubo](./pruevas/piezasdobles.jpeg)
 
 *Proceso de ensamblaje de las caras del cubo en SOLIDWORKS.*
 
