@@ -18,11 +18,7 @@ También aprendimos la importancia de realizar correctamente las conexiones y de
 
 ### Evidencia de la práctica
 
-<video controls width="700">
-    <source src="videos/practica1.mp4" type="video/mp4">
-    Tu navegador no puede reproducir este video.
-</video>
-
+![Circuito físico con ESP32](../pruebas/video1.mp4)
 ---
 
 ## Práctica 2 - Bases de programación con Arduino
@@ -37,13 +33,13 @@ Uno de los primeros ejercicios consistió en utilizar el **monitor serial** para
 
 ### Evidencia del primer programa
 
-![Primer programa realizado](images/codigo-hola-mundo.jpg)
+![Primer programa realizado](../pruebas/arduino%202.jpeg)
 
 Después comenzamos a trabajar con las **salidas digitales**. Aprendimos que los pines pueden cambiar entre los estados `HIGH` y `LOW`, lo que permite controlar componentes electrónicos.
 
 ### Evidencia de programación de salidas
 
-![Programación de salidas digitales](images/codigo-salidas.jpg)
+![Programación de salidas digitales](../pruebas/arduino3.jpeg)
 
 Con estos ejercicios comprendimos mejor la estructura de un programa y la forma en que las instrucciones escritas pueden controlar los pines de un microcontrolador.
 
@@ -61,11 +57,11 @@ Para esto utilizamos una entrada digital y observamos el resultado mediante el m
 
 ### Evidencia del código
 
-![Código para detectar el botón](images/codigo-boton.jpg)
+![Código para detectar el botón](../pruebas/arduino4.jpegp)
 
 ### Evidencia del circuito
 
-![Circuito físico con ESP32](images/circuito-esp32.jpg)
+![Circuito físico con ESP32](../pruebas/circuito1.jpeg)
 
 Esta práctica nos permitió comprender mejor la diferencia entre una **entrada** y una **salida**.
 
@@ -94,11 +90,11 @@ Durante la práctica realizamos las conexiones entre el Arduino, el L293D y el m
 
 ### Evidencia del circuito
 
-![Motor conectado en Tinkercad](images/motor-tinkercad.jpg)
+![Motor conectado en Tinkercad](../pruebas/motor3.jpeg)
 
 ### Evidencia del código utilizado
 
-![Código para controlar el motor](images/codigo-motor.jpg)
+![Código para controlar el motor](../pruebas/motor2.jpeg)
 
 Posteriormente realizamos un circuito más completo en Tinkercad, utilizando motores, controladores L293D y fuentes de alimentación.
 
