@@ -16,7 +16,6 @@ Finalmente, realizamos el diseño de las caras de un cubo con cortes y pestañas
 
 ---
 
-
 # Práctica 1: Introducción al modelado en SOLIDWORKS
 
 En la primera clase comenzamos a trabajar con **SOLIDWORKS**. El objetivo principal fue aprender a utilizar las herramientas básicas del programa y entender cómo se puede pasar de un croquis en dos dimensiones a una pieza tridimensional.
