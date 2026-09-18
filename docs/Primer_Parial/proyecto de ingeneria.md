@@ -42,13 +42,13 @@ Con estos ejercicios aprendimos a:
 
 -   **Pieza escalonada**
 
-    ![Croquis de la pieza escalonada](./pruevas/escalera.jpeg)
+    ![Croquis de la pieza escalonada](./pruevas/escalera.jpg)
 
     *Croquis de la pieza escalonada realizado en SOLIDWORKS.*
 
 -   **Pieza terminada**
 
-    ![Pieza modelada en SOLIDWORKS](./pieza rara/escalera.jpeg)
+    ![Pieza modelada en SOLIDWORKS](./pieza rara/escalera.jpg)
 
     *Modelo tridimensional de una de las piezas realizadas.*
 
@@ -79,13 +79,13 @@ Los **guantes y el mandil** ayudan a proteger las manos y el cuerpo contra part�
 
 -   **Equipo de protección personal**
 
-    ![Equipo de protección](./pruevas/mesa rara.jpeg)
+    ![Equipo de protección](./pruevas/mesa rara.jpg)
 
     *Uso del equipo de protección personal para realizar trabajos de soldadura.*
 
 -   **Careta, guantes y mandil**
 
-    ![Equipo de soldadura](./pruevas/señorraro.jpeg)
+    ![Equipo de soldadura](./pruevas/señorraro.jpg)
 
     *Equipo utilizado durante la práctica.*
 
@@ -101,7 +101,7 @@ Este equipo permite generar el calor necesario para unir materiales metálicos. 
 
 El uso de esta máquina requiere utilizar correctamente el equipo de protección debido a las chispas, el calor y la intensa luz generada durante el proceso.
 
-![Máquina de soldar](./pruevas/maquinarara.jpeg)
+![Máquina de soldar](./pruevas/maquinarara.jpg)
 
 *Máquina de soldar utilizada durante la práctica.*
 
@@ -157,11 +157,11 @@ El procedimiento que seguimos fue:
 
 -   **Cara del cubo**
 
-    ![Cara del cubo](./pruevas/parte1.jpeg)
+    ![Cara del cubo](./pruevas/parte1.jpg)
 
 --   **Pieza terminada**
 
-    ![Pieza terminada](./pruevas/armado.jpeg)
+    ![Pieza terminada](./pruevas/armado.jpg)
 
     *Resultado de una de las caras después del modelado.*
 
@@ -175,7 +175,7 @@ Después de terminar las piezas se utilizaron las herramientas de ensamblaje de 
 
 Las pestañas y los cortes permiten que las caras coincidan entre sí para formar finalmente el cubo.
 
-![Ensamble del cubo](./pruevas/piezasdobles.jpeg)
+![Ensamble del cubo](./pruevas/piezasdobles.jpg)
 
 *Proceso de ensamblaje de las caras del cubo en SOLIDWORKS.*
 
