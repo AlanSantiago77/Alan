@@ -1,0 +1,1123 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../proyecto%20de%20ingeneria/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Reporte de prácticas - Introducción a la Mecatrónica - Plantilla para Documentación</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reporte-de-practicas-introduccion-a-la-mecatronica" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Plantilla para Documentación" class="md-header__button md-logo" aria-label="Plantilla para Documentación" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Plantilla para Documentación
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Reporte de prácticas - Introducción a la Mecatrónica
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Plantilla para Documentación" class="md-nav__button md-logo" aria-label="Plantilla para Documentación" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Plantilla para Documentación
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentación del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../comandos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Encabezados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ejemplo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Ejemplo de Documentación del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gitcmds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 Comandos básicos de Git (primeros pasos)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Primer Parial
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Primer Parial
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../proyecto%20de%20ingeneria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporte de Proyecto de Mecatrónica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduccion Mecatronica
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Introduccion Mecatronica
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporte de prácticas - Introducción a la Mecatrónica
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporte de prácticas - Introducción a la Mecatrónica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-1-introduccion-a-la-electronica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Práctica 1 - Introducción a la electrónica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Práctica 1 - Introducción a la electrónica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidencia-de-la-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidencia de la práctica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-2-bases-de-programacion-con-arduino" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Práctica 2 - Bases de programación con Arduino
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Práctica 2 - Bases de programación con Arduino">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidencia-del-primer-programa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidencia del primer programa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencia-de-programacion-de-salidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidencia de programación de salidas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-3-entradas-digitales-con-esp32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Práctica 3 - Entradas digitales con ESP32
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Práctica 3 - Entradas digitales con ESP32">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidencia-del-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidencia del código
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencia-del-circuito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidencia del circuito
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-4-control-de-un-motor-en-tinkercad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Práctica 4 - Control de un motor en Tinkercad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Práctica 4 - Control de un motor en Tinkercad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidencia-del-circuito_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidencia del circuito
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencia-del-codigo-utilizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidencia del código utilizado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-5-circuito-fisico-con-esp32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Práctica 5 - Circuito físico con ESP32
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Práctica 5 - Circuito físico con ESP32">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidencia
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusión
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-1-introduccion-a-la-electronica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Práctica 1 - Introducción a la electrónica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Práctica 1 - Introducción a la electrónica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidencia-de-la-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidencia de la práctica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-2-bases-de-programacion-con-arduino" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Práctica 2 - Bases de programación con Arduino
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Práctica 2 - Bases de programación con Arduino">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidencia-del-primer-programa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidencia del primer programa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencia-de-programacion-de-salidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidencia de programación de salidas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-3-entradas-digitales-con-esp32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Práctica 3 - Entradas digitales con ESP32
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Práctica 3 - Entradas digitales con ESP32">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidencia-del-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidencia del código
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencia-del-circuito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidencia del circuito
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-4-control-de-un-motor-en-tinkercad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Práctica 4 - Control de un motor en Tinkercad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Práctica 4 - Control de un motor en Tinkercad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidencia-del-circuito_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidencia del circuito
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencia-del-codigo-utilizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidencia del código utilizado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica-5-circuito-fisico-con-esp32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Práctica 5 - Circuito físico con ESP32
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Práctica 5 - Circuito físico con ESP32">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidencia
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusión
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="reporte-de-practicas-introduccion-a-la-mecatronica">Reporte de prácticas - Introducción a la Mecatrónica</h1>
+<h2 id="introduccion">Introducción</h2>
+<p>Durante las clases de <strong>Introducción a la Mecatrónica</strong> realizamos diferentes prácticas para conocer las bases de la electrónica, la programación y el control de componentes.</p>
+<p>A lo largo de las clases trabajamos con diferentes herramientas, como Arduino IDE, ESP32, Arduino UNO, protoboard y Tinkercad. Primero aprendimos algunos conceptos básicos y después comenzamos a realizar programas y circuitos para controlar componentes electrónicos.</p>
+<hr />
+<h2 id="practica-1-introduccion-a-la-electronica">Práctica 1 - Introducción a la electrónica</h2>
+<p>En la primera práctica comenzamos a conocer algunos de los conceptos y herramientas que se utilizan en mecatrónica.</p>
+<p>Durante la actividad realizamos pruebas con equipo electrónico para observar el comportamiento de diferentes señales. Esto nos permitió tener un primer acercamiento al uso de los instrumentos que se encuentran dentro del laboratorio.</p>
+<p>También aprendimos la importancia de realizar correctamente las conexiones y de revisar el circuito antes de comenzar una prueba.</p>
+<h3 id="evidencia-de-la-practica">Evidencia de la práctica</h3>
+<h2 id="_1"><img alt="Circuito físico con ESP32" src="../../pruebas/video1.mp4" /></h2>
+<h2 id="practica-2-bases-de-programacion-con-arduino">Práctica 2 - Bases de programación con Arduino</h2>
+<p>En la segunda práctica comenzamos a aprender las <strong>bases de programación para microcontroladores</strong>.</p>
+<p>Utilizamos Arduino IDE para conocer la estructura básica de un programa. Aprendimos que <code>setup()</code> se utiliza para realizar las configuraciones iniciales y que <code>loop()</code> contiene las instrucciones que se ejecutan continuamente.</p>
+<p>También aprendimos para qué sirven algunas instrucciones básicas, como <code>pinMode()</code>, <code>digitalWrite()</code>, <code>digitalRead()</code>, <code>delay()</code> y <code>Serial.println()</code>.</p>
+<p>Uno de los primeros ejercicios consistió en utilizar el <strong>monitor serial</strong> para enviar mensajes desde el microcontrolador hacia la computadora.</p>
+<h3 id="evidencia-del-primer-programa">Evidencia del primer programa</h3>
+<p><img alt="Primer programa realizado" src="../../pruebas/arduino%202.jpeg" /></p>
+<p>Después comenzamos a trabajar con las <strong>salidas digitales</strong>. Aprendimos que los pines pueden cambiar entre los estados <code>HIGH</code> y <code>LOW</code>, lo que permite controlar componentes electrónicos.</p>
+<h3 id="evidencia-de-programacion-de-salidas">Evidencia de programación de salidas</h3>
+<p><img alt="Programación de salidas digitales" src="../../pruebas/arduino3.jpeg" /></p>
+<p>Con estos ejercicios comprendimos mejor la estructura de un programa y la forma en que las instrucciones escritas pueden controlar los pines de un microcontrolador.</p>
+<hr />
+<h2 id="practica-3-entradas-digitales-con-esp32">Práctica 3 - Entradas digitales con ESP32</h2>
+<p>Después de trabajar con las salidas, comenzamos a utilizar las <strong>entradas digitales</strong>.</p>
+<p>Para esta práctica utilizamos una <strong>ESP32</strong>, una protoboard, cables jumper, un botón y otros componentes electrónicos.</p>
+<p>El objetivo fue aprender a detectar mediante programación si un botón estaba siendo presionado.</p>
+<p>Para esto utilizamos una entrada digital y observamos el resultado mediante el monitor serial. Cuando el botón cambiaba de estado, el microcontrolador podía detectar este cambio y mostrar la información en la computadora.</p>
+<h3 id="evidencia-del-codigo">Evidencia del código</h3>
+<p><img alt="Código para detectar el botón" src="../pruebas/arduino4.jpegp" /></p>
+<h3 id="evidencia-del-circuito">Evidencia del circuito</h3>
+<p><img alt="Circuito físico con ESP32" src="../../pruebas/circuito1.jpeg" /></p>
+<p>Esta práctica nos permitió comprender mejor la diferencia entre una <strong>entrada</strong> y una <strong>salida</strong>.</p>
+<p>Una entrada permite que el microcontrolador reciba información de un elemento externo, como un botón o un sensor. Una salida permite controlar otros componentes, como un LED o un motor.</p>
+<hr />
+<h2 id="practica-4-control-de-un-motor-en-tinkercad">Práctica 4 - Control de un motor en Tinkercad</h2>
+<p>En otra de las prácticas utilizamos <strong>Tinkercad Circuits</strong> para simular un circuito antes de realizarlo físicamente.</p>
+<p>El objetivo principal fue aprender a conectar y controlar un <strong>motor de corriente directa (DC)</strong> utilizando un Arduino UNO.</p>
+<p>Para realizar el circuito utilizamos principalmente:</p>
+<ul>
+<li>Arduino UNO</li>
+<li>Motor DC</li>
+<li>Puente H L293D</li>
+<li>Batería de 9 V</li>
+<li>Cables de conexión</li>
+<li>Tinkercad Circuits</li>
+</ul>
+<p>El <strong>L293D</strong> es un circuito integrado que funciona como controlador de motores. Permite que el Arduino controle el motor utilizando señales digitales.</p>
+<p>Durante la práctica realizamos las conexiones entre el Arduino, el L293D y el motor. Después programamos los pines necesarios y ejecutamos la simulación para comprobar el funcionamiento.</p>
+<h3 id="evidencia-del-circuito_1">Evidencia del circuito</h3>
+<p><img alt="Motor conectado en Tinkercad" src="../../pruebas/motor3.jpeg" /></p>
+<h3 id="evidencia-del-codigo-utilizado">Evidencia del código utilizado</h3>
+<p><img alt="Código para controlar el motor" src="../../pruebas/motor2.jpeg" /></p>
+<p>Posteriormente realizamos un circuito más completo en Tinkercad, utilizando motores, controladores L293D y fuentes de alimentación.</p>
+<p><img alt="Circuito completo en Tinkercad" src="images/tinkercad-completo.jpg" /></p>
+<p>Esta simulación nos permitió entender mejor cómo se puede utilizar un microcontrolador para controlar el movimiento de un motor.</p>
+<p>También aprendimos que Tinkercad es útil para probar un circuito de manera virtual antes de realizar las conexiones físicamente.</p>
+<hr />
+<h2 id="practica-5-circuito-fisico-con-esp32">Práctica 5 - Circuito físico con ESP32</h2>
+<p>Después de realizar diferentes ejercicios de programación, trabajamos con los componentes de manera física.</p>
+<p>Utilizamos una <strong>ESP32 colocada sobre una protoboard</strong>, cables jumper y diferentes componentes electrónicos.</p>
+<p>Realizamos las conexiones necesarias y cargamos nuestros programas en la ESP32 para comprobar que lo realizado anteriormente mediante programación también funcionara en un circuito real.</p>
+<h3 id="evidencia">Evidencia</h3>
+<p><img alt="ESP32 conectada en protoboard" src="images/esp32-protoboard.jpg" /></p>
+<p>Durante esta actividad aprendimos que tanto el programa como las conexiones físicas son importantes. Un error en cualquiera de los dos puede provocar que el circuito no funcione correctamente.</p>
+<hr />
+<h2 id="conclusion">Conclusión</h2>
+<p>Durante estas prácticas aprendimos poco a poco las bases necesarias para comenzar a trabajar con sistemas mecatrónicos.</p>
+<p>Primero conocimos algunos conceptos y herramientas de electrónica. Después aprendimos las bases de programación y la forma de utilizar entradas y salidas digitales con un microcontrolador.</p>
+<p>También trabajamos con una ESP32 y utilizamos el monitor serial para observar información enviada por la placa.</p>
+<p>Finalmente utilizamos Tinkercad para realizar simulaciones con Arduino UNO, motores DC y el controlador L293D. Esto nos permitió relacionar la programación con la electrónica y observar cómo un programa puede controlar componentes físicos.</p>
+<p>En general, estas prácticas nos ayudaron a comprender mejor cómo se relacionan la <strong>programación, la electrónica y el control de dispositivos dentro de la mecatrónica</strong>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
