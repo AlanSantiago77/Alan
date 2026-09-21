@@ -42,13 +42,13 @@ Con estos ejercicios aprendimos a:
 
 -   **Pieza escalonada**
 
-    ![Croquis de la pieza escalonada](./pruevas/escalera.jpg)
+    ![Croquis de la pieza escalonada](../Primer_Parial/pruebas/escalera.jpeg)
 
     *Croquis de la pieza escalonada realizado en SOLIDWORKS.*
 
 -   **Pieza terminada**
 
-    ![Pieza modelada en SOLIDWORKS](./pieza rara/escalera.jpg)
+    ![Pieza modelada en SOLIDWORKS](../Primer_Parial/pruebas/pieza%20rara.jpeg)
 
     *Modelo tridimensional de una de las piezas realizadas.*
 
@@ -79,13 +79,12 @@ Los **guantes y el mandil** ayudan a proteger las manos y el cuerpo contra part�
 
 -   **Equipo de protección personal**
 
-    ![Equipo de protección](./pruevas/mesa rara.jpg)
-
+    ![Equipo de protección](../Primer_Parial/pruebas/mesa%20rara.jpeg)
     *Uso del equipo de protección personal para realizar trabajos de soldadura.*
 
 -   **Careta, guantes y mandil**
 
-    ![Equipo de soldadura](./pruevas/señorraro.jpg)
+    ![Equipo de soldadura](../Primer_Parial/pruebas/señorraro.jpeg)
 
     *Equipo utilizado durante la práctica.*
 
@@ -101,7 +100,7 @@ Este equipo permite generar el calor necesario para unir materiales metálicos. 
 
 El uso de esta máquina requiere utilizar correctamente el equipo de protección debido a las chispas, el calor y la intensa luz generada durante el proceso.
 
-![Máquina de soldar](./pruevas/maquinarara.jpg)
+![Máquina de soldar](../Primer_Parial/pruebas/maquinarara.jpeg)
 
 *Máquina de soldar utilizada durante la práctica.*
 
@@ -151,20 +150,15 @@ El procedimiento que seguimos fue:
 
 -   **Diseño inicial**
 
-    ![Diseño de las caras](img/cubo_1.jpeg)
+    ![Diseño de las caras](../Primer_Parial/pruebas/parte1.jpeg)
 
     *Diseño de diferentes caras para formar el cubo.*
 
 -   **Cara del cubo**
 
-    ![Cara del cubo](./pruevas/parte1.jpg)
+    ![Cara del cubo](../Primer_Parial/pruebas/piezasdobles.jpeg)
 
---   **Pieza terminada**
-
-    ![Pieza terminada](./pruevas/armado.jpg)
-
-    *Resultado de una de las caras después del modelado.*
-
+--
 </div>
 
 ---
@@ -175,7 +169,7 @@ Después de terminar las piezas se utilizaron las herramientas de ensamblaje de 
 
 Las pestañas y los cortes permiten que las caras coincidan entre sí para formar finalmente el cubo.
 
-![Ensamble del cubo](./pruevas/piezasdobles.jpg)
+![Ensamble del cubo](../Primer_Parial/pruebas/armado.jpeg)
 
 *Proceso de ensamblaje de las caras del cubo en SOLIDWORKS.*
 
