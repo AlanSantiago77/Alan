@@ -57,7 +57,7 @@ Para esto utilizamos una entrada digital y observamos el resultado mediante el m
 
 ### Evidencia del código
 
-![Código para detectar el botón](../pruebas/arduino4.jpegp)
+![Código para detectar el botón](../pruebas/arduino4.jpeg)
 
 ### Evidencia del circuito
 
@@ -90,15 +90,14 @@ Durante la práctica realizamos las conexiones entre el Arduino, el L293D y el m
 
 ### Evidencia del circuito
 
-![Motor conectado en Tinkercad](../pruebas/motor3.jpeg)
-
+![Motor conectado en Tinkercad](../pruebas/motor5.jpeg)
 ### Evidencia del código utilizado
 
 ![Código para controlar el motor](../pruebas/motor2.jpeg)
 
 Posteriormente realizamos un circuito más completo en Tinkercad, utilizando motores, controladores L293D y fuentes de alimentación.
 
-![Circuito completo en Tinkercad](images/tinkercad-completo.jpg)
+![Circuito completo en Tinkercad](../pruebas/motor3.jpeg)
 
 Esta simulación nos permitió entender mejor cómo se puede utilizar un microcontrolador para controlar el movimiento de un motor.
 
