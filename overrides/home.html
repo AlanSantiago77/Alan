@@ -1,0 +1,99 @@
+{% extends "main.html" %}
+
+{% block content %}
+{% import "partials/tarjetas.html" as t with context %}
+{% set cat = config.extra.catalogo %}
+{% set s = cat.stats %}
+{% set urls = cat.urls %}
+
+<section class="hero" aria-labelledby="hero-titulo">
+  <div class="hero__arte" aria-hidden="true">
+    {% include "partials/hero-arte.html" %}
+  </div>
+  <div class="hero__texto">
+    {% if page.meta.saludo %}<p class="hero__saludo entrada" style="--d:0">{{ page.meta.saludo }}</p>{% endif %}
+    <h1 id="hero-titulo" class="hero__titulo entrada" style="--d:1">
+      {{ page.meta.titulo | d("Reportes de") }}
+      <span class="degradado">{{ page.meta.titulo_destacado | d("Prácticas") }}</span>
+    </h1>
+    <p class="hero__desc entrada" style="--d:2">{{ page.meta.descripcion | d(config.site_description) }}</p>
+    <div class="hero__acciones entrada" style="--d:3">
+      <a class="boton boton--primario" href="{{ urls['materias.md'] | url if 'materias.md' in urls else '#materias' }}">
+        {% include ".icons/material/book-open-page-variant.svg" %}
+        Explorar prácticas
+        {% include ".icons/material/arrow-right.svg" %}
+      </a>
+      {% if config.repo_url %}
+        <a class="boton boton--contorno" href="{{ config.repo_url }}" target="_blank" rel="noopener">
+          {% include ".icons/fontawesome/brands/github.svg" %}
+          Ver en GitHub
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="stats" aria-label="Estadísticas del repositorio">
+  <div class="stat reveal">
+    <span class="stat__icono">{% include ".icons/material/file-document-outline.svg" %}</span>
+    <div>
+      <span class="stat__valor" data-contar="{{ s.registradas }}">{{ s.registradas }}</span>
+      <span class="stat__etiqueta">Prácticas registradas</span>
+    </div>
+  </div>
+  <div class="stat reveal">
+    <span class="stat__icono">{% include ".icons/material/layers-triple-outline.svg" %}</span>
+    <div>
+      <span class="stat__valor" data-contar="{{ s.previstas }}">{{ s.previstas }}</span>
+      <span class="stat__etiqueta">Prácticas previstas</span>
+    </div>
+  </div>
+  <div class="stat reveal">
+    {% set circ = 150.8 %}
+    <svg class="stat__anillo" viewBox="0 0 56 56" aria-hidden="true">
+      <circle class="stat__anillo-fondo" cx="28" cy="28" r="24"></circle>
+      <circle class="stat__anillo-valor" cx="28" cy="28" r="24"
+              stroke-dasharray="{{ circ }}"
+              stroke-dashoffset="{{ (circ * (1 - s.avance / 100)) | round(2) }}"
+              style="--offset: {{ (circ * (1 - s.avance / 100)) | round(2) }}"></circle>
+      <text x="28" y="33" text-anchor="middle">%</text>
+    </svg>
+    <div>
+      <span class="stat__valor"><span data-contar="{{ s.avance }}">{{ s.avance }}</span>%</span>
+      <span class="stat__etiqueta">Avance general</span>
+    </div>
+  </div>
+  <div class="stat reveal">
+    <span class="stat__icono">{% include ".icons/material/calendar-month-outline.svg" %}</span>
+    <div>
+      <span class="stat__valor stat__valor--texto">{{ s.periodo }}</span>
+      <span class="stat__etiqueta">Periodo actual</span>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="materias">
+  {{ t.encabezado_seccion("material/layers-triple", "Materias", "Explora los reportes por materia") }}
+  <div class="rejilla-materias">
+    {% for m in cat.materias %}
+      {{ t.tarjeta_materia(m) }}
+    {% endfor %}
+  </div>
+</section>
+
+{% if cat.recientes %}
+<section class="seccion">
+  <div class="seccion__cabecera">
+    {{ t.encabezado_seccion("material/file-document-outline", "Prácticas recientes", "Últimos reportes subidos al repositorio") }}
+    {% if 'materias.md' in urls %}
+      <a class="boton boton--suave" href="{{ urls['materias.md'] | url }}">Ver todas las prácticas {% include ".icons/material/arrow-right.svg" %}</a>
+    {% endif %}
+  </div>
+  <div class="rejilla-practicas">
+    {% for p in cat.recientes %}
+      {{ t.tarjeta_practica(p) }}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+{% endblock %}

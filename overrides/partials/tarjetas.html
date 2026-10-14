@@ -1,0 +1,61 @@
+{#- Macros reutilizables para tarjetas de materias y prácticas -#}
+
+{% macro tarjeta_materia(m) %}
+  <a class="tarjeta-materia color-{{ m.color }} reveal" href="{{ m.url | url if m.url else '#' }}" aria-label="Abrir {{ m.nombre }}">
+    {% if m.portada %}
+      <img class="tarjeta-materia__fondo" src="{{ m.portada | url }}" alt="" loading="lazy" decoding="async">
+    {% endif %}
+    <span class="tarjeta-materia__velo" aria-hidden="true"></span>
+    <span class="tarjeta-materia__icono">{% include ".icons/" ~ m.icono ~ ".svg" %}</span>
+    <span class="tarjeta-materia__cuerpo">
+      <span class="tarjeta-materia__nombre">{{ m.nombre }}</span>
+      {% if m.descripcion %}<span class="tarjeta-materia__desc">{{ m.descripcion }}</span>{% endif %}
+    </span>
+    <span class="tarjeta-materia__pie">
+      <span class="tarjeta-materia__conteo">
+        {% include ".icons/material/file-document-outline.svg" %}
+        {{ m.total }} {{ "práctica" if m.total == 1 else "prácticas" }}
+      </span>
+      <span class="boton-flecha" aria-hidden="true">{% include ".icons/material/arrow-right.svg" %}</span>
+    </span>
+  </a>
+{% endmacro %}
+
+{% macro tarjeta_practica(p, mostrar_materia=True) %}
+  <a class="tarjeta-practica color-{{ p.materia_color }} reveal" href="{{ p.url | url }}"
+     data-filtro="{{ (p.titulo ~ ' ' ~ p.materia_nombre ~ ' ' ~ (p.materiales | join(' ')) ~ ' ' ~ (p.etiquetas | join(' ')) ~ ' practica ' ~ p.numero_txt) | lower | e }}"
+     data-materia="{{ p.materia }}">
+    <span class="tarjeta-practica__media">
+      {% if p.portada %}
+        <img src="{{ p.portada | url }}" alt="" loading="lazy" decoding="async">
+      {% else %}
+        <span class="tarjeta-practica__sin-foto">{% include ".icons/" ~ p.materia_icono ~ ".svg" %}</span>
+      {% endif %}
+      <span class="pastilla">Práctica {{ p.numero_txt }}</span>
+    </span>
+    <span class="tarjeta-practica__cuerpo">
+      <span class="tarjeta-practica__titulo">{{ p.titulo }}</span>
+      <span class="boton-flecha boton-flecha--chico" aria-hidden="true">{% include ".icons/material/arrow-right.svg" %}</span>
+    </span>
+    <span class="tarjeta-practica__pie">
+      {% if mostrar_materia %}
+        <span class="tarjeta-practica__materia">{% include ".icons/" ~ p.materia_icono ~ ".svg" %}{{ p.materia_nombre }}</span>
+      {% else %}
+        <span class="tarjeta-practica__materia tarjeta-practica__resumen">{{ p.resumen }}</span>
+      {% endif %}
+      {% if p.fecha %}
+        <span class="tarjeta-practica__fecha">{% include ".icons/material/calendar-blank-outline.svg" %}{{ p.fecha }}</span>
+      {% endif %}
+    </span>
+  </a>
+{% endmacro %}
+
+{% macro encabezado_seccion(icono, titulo, subtitulo) %}
+  <div class="seccion__titulo">
+    <span class="seccion__icono">{% include ".icons/" ~ icono ~ ".svg" %}</span>
+    <div>
+      <h2>{{ titulo }}</h2>
+      {% if subtitulo %}<p>{{ subtitulo }}</p>{% endif %}
+    </div>
+  </div>
+{% endmacro %}

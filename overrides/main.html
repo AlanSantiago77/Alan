@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  <meta name="theme-color" content="#060b16" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f3f6fb" media="(prefers-color-scheme: light)">
+  <script>document.documentElement.classList.add("js");</script>
+  {% if page.meta and page.meta.tipo == "practica" %}
+    <style>.md-footer__inner{display:none!important}</style>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  {% import "partials/tarjetas.html" as t with context %}
+  {% set info = page.meta.practica_info if page.meta else none %}
+  {% if info %}
+    <header class="practica-cabecera color-{{ info.materia_color }}">
+      <nav class="practica-migas" aria-label="Ruta">
+        {% for m in config.extra.catalogo.materias if m.slug == info.materia %}
+          <a href="{{ m.url | url }}">{% include ".icons/" ~ info.materia_icono ~ ".svg" %}{{ info.materia_nombre }}</a>
+        {% endfor %}
+        <span aria-hidden="true">/</span>
+        <span>Práctica {{ info.numero_txt }}</span>
+      </nav>
+      <div class="practica-cabecera__fila">
+        <span class="practica-numero" aria-label="Práctica número {{ info.numero }}">
+          <small>Práctica</small>{{ info.numero_txt }}
+        </span>
+        <div>
+          <h1>{{ page.title }}</h1>
+          <div class="chips">
+            <span class="chip chip--materia">{% include ".icons/" ~ info.materia_icono ~ ".svg" %}{{ info.materia_nombre }}</span>
+            {% if info.parcial %}<span class="chip">{% include ".icons/material/calendar-range-outline.svg" %}{{ ["", "Primer", "Segundo", "Tercer", "Cuarto", "Quinto"][info.parcial] }} Parcial</span>{% endif %}
+            {% if info.fecha %}<span class="chip">{% include ".icons/material/calendar-blank-outline.svg" %}{{ info.fecha }}</span>{% endif %}
+            {% set n_fotos = info.imagenes | selectattr("existe") | list | length %}
+            {% set n_videos = info.videos | selectattr("existe") | list | length %}
+            {% if n_fotos %}<span class="chip">{% include ".icons/material/image-outline.svg" %}{{ n_fotos }} {{ "foto" if n_fotos == 1 else "fotos" }}</span>{% endif %}
+            {% if n_videos %}<span class="chip">{% include ".icons/material/play-circle-outline.svg" %}{{ n_videos }} {{ "video" if n_videos == 1 else "videos" }}</span>{% endif %}
+          </div>
+        </div>
+      </div>
+      {% if info.materiales %}
+        <div class="practica-materiales">
+          <span class="practica-materiales__titulo">{% include ".icons/material/toolbox-outline.svg" %}Materiales y herramientas</span>
+          <ul>{% for mat in info.materiales %}<li>{{ mat }}</li>{% endfor %}</ul>
+        </div>
+      {% endif %}
+    </header>
+
+    <div class="practica-contenido">
+      {{ page.content }}
+    </div>
+
+    <nav class="practica-pager" aria-label="Otras prácticas de la materia">
+      {% if info.anterior_url %}
+        <a class="practica-pager__enlace practica-pager__enlace--prev" href="{{ info.anterior_url | url }}">
+          <span class="practica-pager__dir">{% include ".icons/material/arrow-left.svg" %} Anterior · Práctica {{ info.anterior_num }}</span>
+          <span class="practica-pager__titulo">{{ info.anterior_titulo }}</span>
+        </a>
+      {% else %}<span></span>{% endif %}
+      {% if info.siguiente_url %}
+        <a class="practica-pager__enlace practica-pager__enlace--next" href="{{ info.siguiente_url | url }}">
+          <span class="practica-pager__dir">Siguiente · Práctica {{ info.siguiente_num }} {% include ".icons/material/arrow-right.svg" %}</span>
+          <span class="practica-pager__titulo">{{ info.siguiente_titulo }}</span>
+        </a>
+      {% endif %}
+    </nav>
+    {% include "partials/source-file.html" %}
+  {% else %}
+    {{ super() }}
+  {% endif %}
+{% endblock %}

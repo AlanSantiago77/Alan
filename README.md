@@ -1,3 +1,43 @@
+# Reportes de Prácticas · Mecatrónica
+
+Sitio de documentación de las prácticas de Mecatrónica de **Alan Santiago**, construido con **MkDocs + Material for MkDocs** y publicado en GitHub Pages:
+<https://alansantiago77.github.io/Alan/>
+
+## Agregar una práctica nueva
+
+1. Copia `docs/_plantillas/practica.md` en la carpeta de la materia, por ejemplo
+   `docs/Primer_Parial/Introduccion_Mecatronica/practica-06-nombre.md`.
+2. Guarda las fotos o videos en `docs/Primer_Parial/pruebas/` y enlázalos con `![descripción](../pruebas/foto.jpg)`.
+   Los videos `.mp4` se insertan de la misma forma y se muestran con un reproductor.
+3. Llena el bloque de metadatos al inicio del archivo (solo `tipo`, `numero` y `title` son obligatorios; `fecha`, `portada`, `materiales` y `etiquetas` son opcionales).
+4. Ejecuta `mkdocs serve` para revisarla y después haz `commit` y `push`.
+
+No tienes que editar `mkdocs.yml`. El contador de prácticas, el % de avance, el periodo, las tarjetas de materias, el menú lateral, el índice, las prácticas recientes y la galería se generan solos con `hooks/catalogo.py`.
+
+**Materia nueva:** crea una carpeta con un `index.md` que tenga `tipo: materia` (copia el de `docs/Primer_Parial/Introduccion_Mecatronica/index.md` y cambia `title`, `slug`, `descripcion`, `icono`, `color` y `portada`).
+**Nuevo parcial:** crea `docs/Segundo_Parcial/<Materia>/...`. El periodo del panel se actualiza solo. En cada práctica pon `materia: <slug>` para que se agrupe con la materia existente.
+**Meta de prácticas:** cambia `practicas_previstas` en `mkdocs.yml`.
+
+## Estructura
+
+```text
+docs/
+├── index.md                 Portada (textos editables en el front matter)
+├── materias.md              Índice de materias y prácticas con filtro
+├── galeria.md               Galería automática de evidencias
+├── recursos.md / acerca.md
+├── Primer_Parial/
+│   ├── Introduccion_Mecatronica/   index.md (materia) + practica-0N-*.md
+│   ├── Proyecto_Mecatronica/       index.md (materia) + practica-0N-*.md
+│   └── pruebas/                    fotos y videos (portadas/ = miniaturas de los videos)
+├── _plantillas/practica.md  Plantilla (no se publica)
+└── assets/                  css/tema.css, js/interfaz.js, img/logo.svg
+hooks/catalogo.py            Genera catálogo, menú, estadísticas y galería
+overrides/                   Plantillas HTML del tema (portada, materia, galería, encabezado)
+```
+
+---
+
 # Portafolio Web con MkDocs
 
 Plantilla para crear y publicar un portafolio web utilizando **Markdown**, **MkDocs Material**, **Git** y **GitHub Pages**.

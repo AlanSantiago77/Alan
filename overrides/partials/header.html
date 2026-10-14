@@ -1,0 +1,86 @@
+{#-
+  Barra superior personalizada (basada en partials/header.html de Material).
+  Contiene: marca, buscador, interruptor de tema, enlaces principales y GitHub.
+-#}
+{% set urls = config.extra.catalogo.urls if config.extra.catalogo else {} %}
+{% set src_actual = page.file.src_uri if page and page.file else "" %}
+{% set enlaces = [
+  ("index.md", "Inicio", "material/home"),
+  ("materias.md", "Materias", "material/book-open-page-variant-outline"),
+  ("recursos.md", "Recursos", "material/file-document-multiple-outline"),
+  ("acerca.md", "Acerca de", "material/information-outline"),
+] %}
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="{{ lang.t('header') }}">
+    <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}" class="md-header__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
+      {% include "partials/logo.html" %}
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Abrir menú">
+      {% include ".icons/material/menu.svg" %}
+    </label>
+    <a class="marca" href="{{ nav.homepage.url | url }}">
+      <span class="marca__nombre">{{ config.site_name }}</span>
+      <span class="marca__sub">{{ config.extra.subtitulo }}</span>
+    </a>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">{{ config.site_name }}</span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            {% if page.meta and page.meta.title %}{{ page.meta.title }}{% else %}{{ page.title }}{% endif %}
+          </span>
+        </div>
+      </div>
+    </div>
+
+    {% if "material/search" in config.plugins %}
+      {% set search = config.plugins["material/search"] | attr("config") %}
+      {% if search.enabled %}
+        <label class="md-header__button md-icon" for="__search" aria-label="Buscar">
+          {% include ".icons/material/magnify.svg" %}
+        </label>
+        {% include "partials/search.html" %}
+      {% endif %}
+    {% endif %}
+
+    {# Interruptor de tema: usa los controles de paleta de Material #}
+    {% if config.theme.palette %}
+      {% if not config.theme.palette is mapping %}
+        <div class="tema" data-tema>
+          {% include "partials/palette.html" %}
+          <button class="tema-switch" type="button" data-tema-switch aria-label="Cambiar entre modo claro y oscuro" title="Cambiar tema">
+            <span class="tema-switch__icono tema-switch__icono--sol">{% include ".icons/material/white-balance-sunny.svg" %}</span>
+            <span class="tema-switch__pista"><span class="tema-switch__perilla"></span></span>
+            <span class="tema-switch__icono tema-switch__icono--luna">{% include ".icons/material/moon-waning-crescent.svg" %}</span>
+          </button>
+        </div>
+      {% endif %}
+    {% endif %}
+    {% if not config.theme.palette is mapping %}
+      {% include "partials/javascripts/palette.html" %}
+    {% endif %}
+
+    <ul class="nav-principal" aria-label="Secciones principales">
+      {% for src, titulo, icono in enlaces %}
+        {% if src in urls %}
+          {% set activo = (src == src_actual) or (src == "materias.md" and page.meta and page.meta.tipo in ["materia", "practica"]) %}
+          <li>
+            <a href="{{ urls[src] | url }}" class="nav-principal__enlace{% if activo %} is-activo{% endif %}"{% if activo %} aria-current="page"{% endif %}>
+              {% include ".icons/" ~ icono ~ ".svg" %}
+              <span>{{ titulo }}</span>
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+    {% if config.repo_url %}
+      <a class="github-boton" href="{{ config.repo_url }}" title="Ver repositorio en GitHub" aria-label="Ver repositorio en GitHub" target="_blank" rel="noopener">
+        {% include ".icons/fontawesome/brands/github.svg" %}
+      </a>
+    {% endif %}
+  </nav>
+  <div class="barra-lectura" data-barra-lectura aria-hidden="true"><span></span></div>
+</header>

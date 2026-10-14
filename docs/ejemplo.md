@@ -1,3 +1,11 @@
+---
+tipo: herramienta
+nav_titulo: Plantilla de proyecto
+orden: 4
+icon: material/file-document-edit-outline
+description: Plantilla genérica para documentar proyectos.
+---
+
 # 📚 Ejemplo de Documentación del Proyecto
 
 > Plantilla genérica para documentar proyectos académicos o de ingeniería.  

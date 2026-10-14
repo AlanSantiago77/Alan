@@ -1,0 +1,72 @@
+{% extends "main.html" %}
+
+{% block content %}
+{% import "partials/tarjetas.html" as t with context %}
+{% set cat = config.extra.catalogo %}
+
+<header class="pagina-cabecera">
+  <h1>{{ page.title }}</h1>
+  <div class="pagina-cabecera__texto">{{ page.content }}</div>
+  <div class="chips">
+    <span class="chip">{% include ".icons/material/image-outline.svg" %}{{ cat.stats.fotos }} {{ "fotografía" if cat.stats.fotos == 1 else "fotografías" }}</span>
+    <span class="chip">{% include ".icons/material/play-circle-outline.svg" %}{{ cat.stats.videos }} {{ "video" if cat.stats.videos == 1 else "videos" }}</span>
+  </div>
+</header>
+
+{% for m in cat.materias %}
+  {% set con_medios = m.practicas | selectattr("imagenes") | list + m.practicas | selectattr("videos") | list %}
+  {% if con_medios %}
+  <section class="seccion galeria-materia color-{{ m.color }}">
+    {{ t.encabezado_seccion(m.icono, m.nombre, m.total ~ (" práctica" if m.total == 1 else " prácticas")) }}
+    {% for p in m.practicas %}
+      {% set imgs = p.imagenes | selectattr("existe") | list %}
+      {% set vids = p.videos | selectattr("existe") | list %}
+      {% if imgs or vids %}
+        <div class="galeria-practica reveal">
+          <a class="galeria-practica__titulo" href="{{ p.url | url }}">
+            <span class="pastilla">Práctica {{ p.numero_txt }}</span>{{ p.titulo }}
+            {% include ".icons/material/arrow-right.svg" %}
+          </a>
+          <div class="galeria galeria--compacta">
+            {% for v in vids %}
+              <figure class="evidencia evidencia--video">
+                <video controls preload="metadata" playsinline{% if v.poster %} poster="{{ v.poster | url }}"{% endif %} aria-label="{{ v.alt }}">
+                  <source src="{{ v.url | url }}" type="video/mp4">
+                </video>
+                {% if v.alt %}<figcaption>{{ v.alt }}</figcaption>{% endif %}
+              </figure>
+            {% endfor %}
+            {% for i in imgs %}
+              <figure>
+                <img src="{{ i.url | url }}" alt="{{ i.alt }}" loading="lazy" decoding="async">
+                {% if i.alt %}<figcaption>{{ i.alt }}</figcaption>{% endif %}
+              </figure>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </section>
+  {% endif %}
+{% endfor %}
+
+{% if cat.otras_evidencias %}
+  <section class="seccion">
+    {{ t.encabezado_seccion("material/image-multiple-outline", "Otras evidencias", "Archivos del repositorio que todavía no están asignados a una práctica") }}
+    <div class="galeria galeria--compacta reveal">
+      {% for i in cat.otras_evidencias %}
+        <figure{% if i.es_video %} class="evidencia evidencia--video"{% endif %}>
+          {% if i.es_video %}
+            <video controls preload="metadata" playsinline{% if i.poster %} poster="{{ i.poster | url }}"{% endif %}>
+              <source src="{{ i.url | url }}" type="video/mp4">
+            </video>
+          {% else %}
+            <img src="{{ i.url | url }}" alt="{{ i.ruta.split('/') | last }}" loading="lazy" decoding="async">
+          {% endif %}
+          <figcaption>{{ i.ruta.split('/') | last }}</figcaption>
+        </figure>
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}
+{% endblock %}

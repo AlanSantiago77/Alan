@@ -1,5 +1,105 @@
-site_name: Plantilla para Documentación
+# =====================================================================
+#  Reportes de Prácticas · Mecatrónica — Alan Santiago
+#  Sitio generado con MkDocs + Material for MkDocs y publicado en
+#  GitHub Pages mediante .github/workflows/ci.yml (mkdocs gh-deploy).
+#
+#  La navegación lateral, las estadísticas, las tarjetas de materias,
+#  las prácticas recientes y la galería se generan solas a partir del
+#  front matter de cada archivo (ver hooks/catalogo.py). Para agregar
+#  una práctica NO hace falta editar este archivo.
+# =====================================================================
+
+site_name: Alan Santiago
+site_description: >-
+  Documentación de las prácticas realizadas en el laboratorio de Mecatrónica,
+  incluyendo procedimientos, códigos, evidencias, resultados y conclusiones.
+site_author: Alan Santiago
+site_url: https://alansantiago77.github.io/Alan/
+repo_url: https://github.com/AlanSantiago77/Alan
+repo_name: AlanSantiago77/Alan
+edit_uri: edit/main/docs/
+copyright: Alan Santiago · Reportes de prácticas de Mecatrónica
+
+# Archivos que se conservan en el repositorio pero NO se publican.
+# Los dos reportes originales se dividieron en una página por práctica
+# (mismo texto); se mantienen aquí como respaldo.
+exclude_docs: |
+  /Primer_Parial/Introduccion_Mecatronica/Reportes.md
+  /Primer_Parial/proyecto de ingeneria.md
+  /_plantillas/
+
+hooks:
+  - hooks/catalogo.py
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: es
+  logo: assets/img/logo.svg
+  favicon: assets/img/logo.svg
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    # Modo oscuro (predeterminado)
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo claro
+    # Modo claro
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - search.share
+    - toc.follow
+    - content.code.copy
+    - content.code.annotate
+    - content.tooltips
+
+plugins:
+  - search:
+      lang: es
+
+extra:
+  # Meta de prácticas para el semestre (se usa para el % de avance)
+  practicas_previstas: 30
+  # Número de tarjetas en "Prácticas recientes"
+  practicas_recientes: 4
+  # Periodo mostrado en el panel. Si se deja vacío se calcula a partir
+  # de la carpeta más reciente (Primer_Parial, Segundo_Parcial, ...)
+  periodo: ""
+  subtitulo: Mecatrónica · Reportes
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/AlanSantiago77/Alan
+      name: Repositorio en GitHub
+
+extra_css:
+  - assets/css/tema.css
+
+extra_javascript:
+  - assets/js/interfaz.js
+
 markdown_extensions:
+  - toc:
+      permalink: true
+      permalink_title: Enlace a esta sección
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -11,30 +111,20 @@ markdown_extensions:
       mode: view
   - pymdownx.caret
   - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
   - def_list
   - attr_list
   - md_in_html
+  - tables
   - pymdownx.blocks.caption
   - admonition
   - pymdownx.details
-  - pymdownx.emoji
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
       clickable_checkbox: true
-# Use the ReadTheDocs theme
-theme:
-  name: material
-  highlightjs: true 
-  palette:
-      - scheme: default
-        primary: red
-
-  features:
-    - content.code.copy
-    - content.tooltips
-extra_css:
-  - https://use.fontawesome.com/releases/v6.5.2/css/all.css
-  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css
-

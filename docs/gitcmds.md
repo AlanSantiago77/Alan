@@ -1,3 +1,11 @@
+---
+tipo: herramienta
+nav_titulo: Comandos útiles
+orden: 1
+icon: material/console
+description: Comandos básicos de Git para trabajar con el repositorio.
+---
+
 # 🚀 Comandos básicos de Git (primeros pasos)
 
 En este curso solo usaremos los comandos esenciales de Git para trabajar con repositorios.

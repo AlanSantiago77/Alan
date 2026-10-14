@@ -1,14 +1,20 @@
-# Documentación del Proyecto
-
-Bienvenido 👋  
-Esta es una **plantilla** basada en [MkDocs](https://www.mkdocs.org/) + [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) para cursos y proyectos.
-
+---
+title: Inicio
+template: home.html
+hide:
+  - toc
+# Textos de la portada (puedes editarlos libremente)
+saludo: Bienvenido a mis
+titulo: Reportes de
+titulo_destacado: Prácticas
+descripcion: >-
+  Documentación de las prácticas realizadas en el laboratorio de Mecatrónica,
+  incluyendo procedimientos, códigos, evidencias, resultados y conclusiones.
 ---
 
-## Empezar rápido (3 pasos)
+<!--
+  El contenido de la portada (estadísticas, materias y prácticas recientes)
+  se genera automáticamente con overrides/home.html y hooks/catalogo.py.
+-->
 
-1. **Edita el nombre del sitio** en `mkdocs.yml`:
-   ```yaml
-   site_name: Documentación del Curso
-   theme:
-     name: material
+Documentación de las prácticas realizadas en el laboratorio de Mecatrónica, incluyendo procedimientos, códigos, evidencias, resultados y conclusiones.

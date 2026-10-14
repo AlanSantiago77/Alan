@@ -1,0 +1,37 @@
+{% extends "main.html" %}
+
+{% block content %}
+{% import "partials/tarjetas.html" as t with context %}
+{% set m = page.meta.materia_info %}
+
+<header class="materia-banner color-{{ m.color }}">
+  {% if m.portada %}<img class="materia-banner__fondo" src="{{ m.portada | url }}" alt="" decoding="async">{% endif %}
+  <span class="materia-banner__velo" aria-hidden="true"></span>
+  <div class="materia-banner__contenido">
+    <span class="tarjeta-materia__icono">{% include ".icons/" ~ m.icono ~ ".svg" %}</span>
+    <div>
+      <p class="materia-banner__eyebrow">Materia</p>
+      <h1>{{ m.nombre }}</h1>
+      {% if m.descripcion %}<p class="materia-banner__desc">{{ m.descripcion }}</p>{% endif %}
+      <div class="chips">
+        <span class="chip">{% include ".icons/material/file-document-outline.svg" %}{{ m.total }} {{ "práctica" if m.total == 1 else "prácticas" }}</span>
+        {% set fotos = namespace(n=0) %}
+        {% for p in m.practicas %}{% set fotos.n = fotos.n + (p.imagenes | selectattr("existe") | list | length) %}{% endfor %}
+        {% if fotos.n %}<span class="chip">{% include ".icons/material/image-outline.svg" %}{{ fotos.n }} evidencias fotográficas</span>{% endif %}
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="seccion">
+  {{ t.encabezado_seccion("material/format-list-numbered", "Prácticas", "Reportes de esta materia") }}
+  <div class="rejilla-practicas">
+    {% for p in m.practicas %}{{ t.tarjeta_practica(p, False) }}{% endfor %}
+  </div>
+</section>
+
+<div class="materia-texto">
+  {{ page.content }}
+</div>
+{% include "partials/source-file.html" %}
+{% endblock %}

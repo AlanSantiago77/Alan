@@ -1,0 +1,40 @@
+{% extends "main.html" %}
+
+{% block content %}
+{% import "partials/tarjetas.html" as t with context %}
+{% set cat = config.extra.catalogo %}
+
+<header class="pagina-cabecera">
+  <h1>{{ page.title }}</h1>
+  <div class="pagina-cabecera__texto">{{ page.content }}</div>
+</header>
+
+<section class="seccion">
+  {{ t.encabezado_seccion("material/layers-triple", "Materias", cat.stats.materias ~ (" materia" if cat.stats.materias == 1 else " materias") ~ " · " ~ cat.stats.registradas ~ " prácticas registradas") }}
+  <div class="rejilla-materias">
+    {% for m in cat.materias %}{{ t.tarjeta_materia(m) }}{% endfor %}
+  </div>
+</section>
+
+<section class="seccion" data-filtro-practicas>
+  <div class="seccion__cabecera">
+    {{ t.encabezado_seccion("material/format-list-numbered", "Todas las prácticas", "Índice completo, ordenado por materia y número") }}
+  </div>
+  <div class="filtro">
+    <label class="filtro__buscar">
+      {% include ".icons/material/filter-variant.svg" %}
+      <input type="search" placeholder="Filtrar por nombre, materia o herramienta…" aria-label="Filtrar prácticas" data-filtro-texto>
+    </label>
+    <div class="filtro__chips" role="group" aria-label="Filtrar por materia">
+      <button type="button" class="filtro__chip is-activo" data-filtro-materia="">Todas</button>
+      {% for m in cat.materias %}
+        <button type="button" class="filtro__chip color-{{ m.color }}" data-filtro-materia="{{ m.slug }}">{{ m.corto }}</button>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="rejilla-practicas" data-filtro-lista>
+    {% for p in cat.practicas %}{{ t.tarjeta_practica(p) }}{% endfor %}
+  </div>
+  <p class="filtro__vacio" data-filtro-vacio hidden>No hay prácticas que coincidan con el filtro.</p>
+</section>
+{% endblock %}

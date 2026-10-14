@@ -1,3 +1,11 @@
+---
+tipo: herramienta
+nav_titulo: Guía de Markdown
+orden: 3
+icon: material/language-markdown
+description: Sintaxis de Markdown y Material for MkDocs con ejemplos.
+---
+
 # Encabezados
 
 ``` codigo
