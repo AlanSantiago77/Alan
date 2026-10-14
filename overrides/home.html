@@ -42,13 +42,6 @@
     </div>
   </div>
   <div class="stat reveal">
-    <span class="stat__icono">{% include ".icons/material/layers-triple-outline.svg" %}</span>
-    <div>
-      <span class="stat__valor" data-contar="{{ s.previstas }}">{{ s.previstas }}</span>
-      <span class="stat__etiqueta">Prácticas previstas</span>
-    </div>
-  </div>
-  <div class="stat reveal">
     {% set circ = 150.8 %}
     <svg class="stat__anillo" viewBox="0 0 56 56" aria-hidden="true">
       <circle class="stat__anillo-fondo" cx="28" cy="28" r="24"></circle>
@@ -82,7 +75,7 @@
 </section>
 
 {% if cat.recientes %}
-<section class="seccion">
+<section class="seccion seccion--recientes">
   <div class="seccion__cabecera">
     {{ t.encabezado_seccion("material/file-document-outline", "Prácticas recientes", "Últimos reportes subidos al repositorio") }}
     {% if 'materias.md' in urls %}

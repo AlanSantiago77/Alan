@@ -378,7 +378,10 @@ def on_config(config, **kwargs):
             seccion.append({m["nombre"]: hijos})
         if seccion:
             nav.append({"Materias": seccion})
-        if herramientas:
+        # La sección "Herramientas" se puede ocultar del menú con
+        # `extra.mostrar_herramientas: false`. Sus páginas se siguen
+        # compilando y conservan su URL; solo dejan de aparecer en el menú.
+        if herramientas and extra.get("mostrar_herramientas", True):
             nav.append({"Herramientas": [{h["titulo"]: h["src"]} for h in _CAT["herramientas"]]})
         config["nav"] = nav
 

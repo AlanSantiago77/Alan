@@ -4,10 +4,11 @@
 -#}
 {% set urls = config.extra.catalogo.urls if config.extra.catalogo else {} %}
 {% set src_actual = page.file.src_uri if page and page.file else "" %}
+{#- "Recursos" se ocultó de esta barra. Para mostrarlo de nuevo agrega:
+    ("recursos.md", "Recursos", "material/file-document-multiple-outline"), -#}
 {% set enlaces = [
   ("index.md", "Inicio", "material/home"),
   ("materias.md", "Materias", "material/book-open-page-variant-outline"),
-  ("recursos.md", "Recursos", "material/file-document-multiple-outline"),
   ("acerca.md", "Acerca de", "material/information-outline"),
 ] %}
 <header class="md-header md-header--shadow" data-md-component="header">

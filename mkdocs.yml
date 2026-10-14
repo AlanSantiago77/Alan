@@ -63,19 +63,26 @@ theme:
     - navigation.top
     - navigation.tracking
     - navigation.footer
-    - search.suggest
-    - search.highlight
-    - search.share
+    # Funciones del buscador (desactivado; ver "plugins")
+    # - search.suggest
+    # - search.highlight
+    # - search.share
     - toc.follow
     - content.code.copy
     - content.code.annotate
     - content.tooltips
 
-plugins:
-  - search:
-      lang: es
+# Buscador desactivado: sin plugins de búsqueda no se muestra la barra
+# ni su ventana. Para recuperarlo, reemplaza la lista vacía por:
+#   - search:
+#       lang: es
+plugins: []
 
 extra:
+  # Sección "Herramientas" del menú lateral (Comandos útiles, Recursos,
+  # Guía de Markdown, Plantilla de proyecto, Galería, Acerca de).
+  # false = oculta del menú; las páginas y archivos se conservan.
+  mostrar_herramientas: false
   # Meta de prácticas para el semestre (se usa para el % de avance)
   practicas_previstas: 30
   # Número de tarjetas en "Prácticas recientes"

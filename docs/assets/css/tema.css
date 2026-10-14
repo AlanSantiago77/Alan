@@ -227,7 +227,7 @@ body::before {
 .md-search-result .md-tag { font-size: .55rem; background: var(--c-panel-2); color: var(--c-texto-2); }
 
 /* Interruptor de tema */
-.tema { display: flex; align-items: center; margin: 0 .3rem; }
+.tema { display: flex; align-items: center; margin: 0 .3rem 0 auto; }
 .tema form[data-md-component="palette"] { display: none; }
 .tema-switch {
   display: inline-flex;
@@ -584,7 +584,7 @@ body::before {
 /* Estadísticas */
 .stats {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: .9rem;
   margin-top: .4rem;
 }
@@ -1129,7 +1129,7 @@ html.visor-activo { overflow: hidden; }
 @media screen and (max-width: 76.234375em) {
   .nav-principal { display: none; }
   .marca { min-width: 0; }
-  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media screen and (max-width: 59.984375em) {
   :root { --header-alto: 3rem; }
@@ -1154,7 +1154,8 @@ html.visor-activo { overflow: hidden; }
   .visor__pie { padding-left: 3.6rem; padding-right: 3.6rem; }
 }
 @media screen and (max-width: 30em) {
-  .stats { gap: .6rem; }
+  .stats { gap: .6rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stats > .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
   .stat { flex-direction: column; align-items: flex-start; gap: .6rem; padding: .85rem; }
   .stat__valor { font-size: 1.25rem; }
   .stat__valor--texto { font-size: .95rem; }
@@ -1171,3 +1172,81 @@ html.visor-activo { overflow: hidden; }
 /* Ajuste: pymdownx.blocks.caption envuelve la imagen en <p> */
 .md-typeset .galeria figure > p { margin: 0; overflow: hidden; }
 .md-typeset figure > p:first-child { margin: 0; }
+
+
+/* =====================================================================
+   Detalles morados y naranjas (sobre la paleta azul)
+   ===================================================================== */
+[data-md-color-scheme="slate"] {
+  --c-morado: #a78bfa; --c-morado-rgb: 167, 139, 250;
+  --c-naranja: #ff9f43; --c-naranja-rgb: 255, 159, 67;
+}
+[data-md-color-scheme="default"] {
+  --c-morado: #7c3aed; --c-morado-rgb: 124, 58, 237;
+  --c-naranja: #e8690c; --c-naranja-rgb: 232, 105, 12;
+}
+
+/* Título de la portada: azul → morado */
+.degradado { background-image: linear-gradient(100deg, #2f8dff 0%, #8b5cf6 75%, #a78bfa 100%); }
+[data-md-color-scheme="default"] .degradado { background-image: linear-gradient(100deg, #1a6fe8 0%, #7c3aed 85%); }
+
+/* Resplandor morado y naranja detrás de la ilustración */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(420px 260px at 92% 20%, rgba(var(--c-morado-rgb), .16), transparent 70%),
+    radial-gradient(320px 220px at 70% 95%, rgba(var(--c-naranja-rgb), .10), transparent 70%);
+}
+
+/* Estadísticas: azul, morado y naranja */
+.stats > .stat:nth-child(2) .stat__anillo-valor { stroke: var(--c-morado); filter: drop-shadow(0 0 4px rgba(var(--c-morado-rgb), .7)); }
+.stats > .stat:nth-child(2) .stat__anillo-fondo { stroke: rgba(var(--c-morado-rgb), .18); }
+.stats > .stat:nth-child(2) .stat__anillo text { fill: var(--c-morado); }
+.stats > .stat:nth-child(3) .stat__icono {
+  color: var(--c-naranja);
+  background: linear-gradient(145deg, rgba(var(--c-naranja-rgb), .26), rgba(var(--c-naranja-rgb), .07));
+  box-shadow: inset 0 0 0 1px rgba(var(--c-naranja-rgb), .32), 0 0 22px -6px rgba(var(--c-naranja-rgb), .5);
+}
+.stats > .stat:nth-child(2):hover { border-color: rgba(var(--c-morado-rgb), .45); }
+.stats > .stat:nth-child(3):hover { border-color: rgba(var(--c-naranja-rgb), .45); }
+
+/* Iconos de sección: Materias en morado, Prácticas recientes en naranja */
+#materias .seccion__icono { color: var(--c-morado); }
+#materias .seccion__icono svg { filter: drop-shadow(0 0 10px rgba(var(--c-morado-rgb), .45)); }
+.seccion--recientes .seccion__icono { color: var(--c-naranja); }
+.seccion--recientes .seccion__icono svg { filter: drop-shadow(0 0 10px rgba(var(--c-naranja-rgb), .45)); }
+
+/* Barra de lectura y subrayado de navegación: azul → morado → naranja */
+.barra-lectura span { background: linear-gradient(90deg, var(--c-acento), var(--c-morado) 60%, var(--c-naranja)); }
+.nav-principal__enlace::after { background: linear-gradient(90deg, var(--c-acento), var(--c-morado)); }
+
+/* Encabezados de los reportes: rombo morado→naranja */
+.practica-contenido > h2::before {
+  background: linear-gradient(135deg, var(--c-morado), var(--c-naranja));
+  box-shadow: 0 0 10px rgba(var(--c-morado-rgb), .6);
+}
+
+/* Etiquetas de "Práctica 0X" en la galería y número de práctica con acento morado */
+.galeria-practica__titulo .pastilla { background: linear-gradient(135deg, var(--m), var(--c-morado)); }
+.practica-cabecera::before { background: linear-gradient(180deg, var(--m), var(--c-morado) 70%, transparent); }
+
+/* Chip "Primer Parcial" en morado y fotos/videos en naranja */
+.practica-cabecera .chips .chip:nth-child(2) { color: var(--c-morado); border-color: rgba(var(--c-morado-rgb), .35); background: rgba(var(--c-morado-rgb), .1); }
+.practica-cabecera .chips .chip:nth-child(n+3) { color: var(--c-naranja); border-color: rgba(var(--c-naranja-rgb), .35); background: rgba(var(--c-naranja-rgb), .08); }
+
+/* Viñetas de listas en morado */
+.md-typeset .practica-contenido ul > li::marker,
+.md-typeset .materia-texto ul > li::marker { color: var(--c-morado); }
+.md-typeset .practica-contenido ol > li::marker { color: var(--c-naranja); font-weight: 700; }
+
+/* Color de cada materia (azul = Introducción, naranja = Proyecto, morado
+   disponible para nuevas materias con `color: violeta`) */
+:is(.tarjeta-materia, .tarjeta-practica, .practica-cabecera, .materia-banner, .galeria-materia, .filtro__chip).color-azul { --m: #2f8dff; --m-rgb: 47, 141, 255; }
+:is(.tarjeta-materia, .tarjeta-practica, .practica-cabecera, .materia-banner, .galeria-materia, .filtro__chip).color-naranja { --m: #ff8a1f; --m-rgb: 255, 138, 31; }
+:is(.tarjeta-materia, .tarjeta-practica, .practica-cabecera, .materia-banner, .galeria-materia, .filtro__chip).color-violeta { --m: #8b5cf6; --m-rgb: 139, 92, 246; }
+[data-md-color-scheme="default"] :is(.tarjeta-practica, .practica-cabecera, .galeria-materia, .filtro__chip).color-naranja { --m: #c2570c; --m-rgb: 194, 87, 12; }
+[data-md-color-scheme="default"] :is(.tarjeta-practica, .practica-cabecera, .galeria-materia, .filtro__chip).color-violeta { --m: #6d28d9; --m-rgb: 109, 40, 217; }
