@@ -6,4 +6,4 @@ hide:
   - toc
 ---
 
-Índice completo de materias y prácticas documentadas. Usa el filtro para encontrar una práctica por nombre, materia o herramienta.
+Materias documentadas en el repositorio. Entra a cada una para ver sus prácticas.
