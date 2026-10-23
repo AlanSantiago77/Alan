@@ -42,21 +42,12 @@ theme:
     code: JetBrains Mono
   icon:
     repo: fontawesome/brands/github
+  # Un solo esquema fijo (oscuro). Sin lista de paletas no hay interruptor
+  # de modo claro/oscuro en el sitio.
   palette:
-    # Modo oscuro (predeterminado)
-    - scheme: slate
-      primary: custom
-      accent: custom
-      toggle:
-        icon: material/weather-sunny
-        name: Cambiar a modo claro
-    # Modo claro
-    - scheme: default
-      primary: custom
-      accent: custom
-      toggle:
-        icon: material/weather-night
-        name: Cambiar a modo oscuro
+    scheme: slate
+    primary: custom
+    accent: custom
   features:
     - navigation.sections
     - navigation.indexes

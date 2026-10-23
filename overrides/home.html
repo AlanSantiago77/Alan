@@ -6,32 +6,27 @@
 {% set s = cat.stats %}
 {% set urls = cat.urls %}
 
-<section class="hero" aria-labelledby="hero-titulo">
-  <div class="hero__arte" aria-hidden="true">
-    {% include "partials/hero-arte.html" %}
-  </div>
-  <div class="hero__texto">
-    {% if page.meta.saludo %}<p class="hero__saludo entrada" style="--d:0">{{ page.meta.saludo }}</p>{% endif %}
-    <h1 id="hero-titulo" class="hero__titulo entrada" style="--d:1">
-      {{ page.meta.titulo | d("Reportes de") }}
-      <span class="degradado">{{ page.meta.titulo_destacado | d("Prácticas") }}</span>
-    </h1>
-    <p class="hero__desc entrada" style="--d:2">{{ page.meta.descripcion | d(config.site_description) }}</p>
-    <div class="hero__acciones entrada" style="--d:3">
-      <a class="boton boton--primario" href="{{ urls['materias.md'] | url if 'materias.md' in urls else '#materias' }}">
-        {% include ".icons/material/book-open-page-variant.svg" %}
-        Explorar prácticas
-        {% include ".icons/material/arrow-right.svg" %}
+<header class="pagina-cabecera" aria-labelledby="hero-titulo">
+  {% if page.meta.saludo %}<p class="hero__saludo entrada" style="--d:0">{{ page.meta.saludo }}</p>{% endif %}
+  <h1 id="hero-titulo" class="entrada" style="--d:1">
+    {{ page.meta.titulo | d("Reportes de") }}
+    <span class="degradado">{{ page.meta.titulo_destacado | d("Prácticas") }}</span>
+  </h1>
+  <p class="pagina-cabecera__texto entrada" style="--d:2">{{ page.meta.descripcion | d(config.site_description) }}</p>
+  <div class="hero__acciones entrada" style="--d:3">
+    <a class="boton boton--primario" href="{{ urls['materias.md'] | url if 'materias.md' in urls else '#materias' }}">
+      {% include ".icons/material/book-open-page-variant.svg" %}
+      Explorar prácticas
+      {% include ".icons/material/arrow-right.svg" %}
+    </a>
+    {% if config.repo_url %}
+      <a class="boton boton--contorno" href="{{ config.repo_url }}" target="_blank" rel="noopener">
+        {% include ".icons/fontawesome/brands/github.svg" %}
+        Ver en GitHub
       </a>
-      {% if config.repo_url %}
-        <a class="boton boton--contorno" href="{{ config.repo_url }}" target="_blank" rel="noopener">
-          {% include ".icons/fontawesome/brands/github.svg" %}
-          Ver en GitHub
-        </a>
-      {% endif %}
-    </div>
+    {% endif %}
   </div>
-</section>
+</header>
 
 <section class="stats" aria-label="Estadísticas del repositorio">
   <div class="stat reveal">
