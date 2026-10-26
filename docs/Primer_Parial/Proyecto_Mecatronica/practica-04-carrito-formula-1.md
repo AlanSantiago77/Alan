@@ -1,7 +1,7 @@
 ---
 tipo: practica
 numero: 4
-title: Diseño y fabricación de un carrito de Fórmula 1 con SOLIDWORKS y corte láser
+title: Carrito de Fórmula 1
 portada: ../pruebas/carrito-f1/09.jpg
 materiales: [SOLIDWORKS, Máquina de corte láser]
 etiquetas: [carrito, fórmula 1, corte láser, ensamble]
@@ -22,7 +22,9 @@ La actividad permitió relacionar el diseño asistido por computadora con un pro
 
 </div>
 
-## Diseño en SOLIDWORKS
+## Parte 1: ensamblado digital
+
+### Diseño en SOLIDWORKS
 
 El primer paso fue construir digitalmente la forma del vehículo mediante piezas individuales. Se trabajó con las herramientas de modelado de SOLIDWORKS, dando forma a los elementos que conforman la carrocería y definiendo los cortes, relieves y espacios necesarios para unirlos.
 
@@ -57,7 +59,9 @@ El diseño se planteó para que las distintas partes pudieran acomodarse entre s
 
 </div>
 
-## Preparación para la fabricación
+## Parte 2: piezas del carrito
+
+### Preparación para la fabricación
 
 Después de desarrollar las piezas digitales, se prepararon sus contornos para el corte láser. Esta etapa fue importante porque el diseño debía conservar las formas y dimensiones necesarias para que los componentes pudieran fabricarse y ensamblarse después.
 
@@ -77,7 +81,7 @@ La distribución de las piezas se organizó según el espacio disponible en el m
 
 </div>
 
-## Ensamblaje
+### Ensamblaje
 
 Una vez obtenidas las piezas, comenzó el armado del carrito. Se identificó cada componente y se fue colocando según la forma en que debía relacionarse dentro de la estructura.
 
