@@ -1,0 +1,1767 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentación de las prácticas realizadas en el laboratorio de Mecatrónica, incluyendo procedimientos, códigos, evidencias, resultados y conclusiones.">
+      
+      
+        <meta name="author" content="Alan Santiago">
+      
+      
+        <link rel="canonical" href="https://alansantiago77.github.io/Alan/Primer_Parial/Proyecto_Mecatronica/practica-05-instrumentos-taller/">
+      
+      
+        <link rel="prev" href="../practica-04-carrito-formula-1/">
+      
+      
+        <link rel="next" href="../practica-06-zorro-minecraft/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/img/logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Instrumentos y máquinas de taller - Alan Santiago</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/css/tema.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <meta name="theme-color" content="#060b16" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f3f6fb" media="(prefers-color-scheme: light)">
+  <script>document.documentElement.classList.add("js");</script>
+  
+    <style>.md-footer__inner{display:none!important}</style>
+  
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduccion" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../.." title="Alan Santiago" class="md-header__button md-logo" aria-label="Alan Santiago" data-md-component="logo">
+      
+  <img src="../../../assets/img/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Abrir menú">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <a class="marca" href="../../..">
+      <span class="marca__nombre">Alan Santiago</span>
+      <span class="marca__sub">Mecatrónica · Reportes</span>
+    </a>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">Alan Santiago</span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            Instrumentos y máquinas de taller
+          </span>
+        </div>
+      </div>
+    </div>
+
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Buscar">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+
+    
+    
+      
+    
+    
+
+    <ul class="nav-principal" aria-label="Secciones principales">
+      
+        
+          
+          <li>
+            <a href="../../../" class="nav-principal__enlace">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+              <span>Inicio</span>
+            </a>
+          </li>
+        
+      
+        
+          
+          <li>
+            <a href="../../../materias/" class="nav-principal__enlace is-activo" aria-current="page">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 1-5 5v11l5-4.5zm2 4v13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6c-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1M10 18.41C8.75 18.09 7.5 18 6.5 18c-1.06 0-2.32.19-3.5.5V7.13c.91-.4 2.14-.63 3.5-.63s2.59.23 3.5.63z"/></svg>
+              <span>Materias</span>
+            </a>
+          </li>
+        
+      
+        
+          
+          <li>
+            <a href="../../../acerca/" class="nav-principal__enlace">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg>
+              <span>Acerca de</span>
+            </a>
+          </li>
+        
+      
+    </ul>
+
+    
+      <a class="github-boton" href="https://github.com/AlanSantiago77/Alan" title="Ver repositorio en GitHub" aria-label="Ver repositorio en GitHub" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+      </a>
+    
+  </nav>
+  <div class="barra-lectura" data-barra-lectura aria-hidden="true"><span></span></div>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Alan Santiago" class="md-nav__button md-logo" aria-label="Alan Santiago" data-md-component="logo">
+      
+  <img src="../../../assets/img/logo.svg" alt="logo">
+
+    </a>
+    Alan Santiago
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/AlanSantiago77/Alan" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AlanSantiago77/Alan
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Materias
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Materias
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../materias/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 16.54 7.37-5.74L21 12.07l-9 7-9-7 1.62-1.26zM12 14 3 7l9-7 9 7zm0-11.47L6.26 7 12 11.47 17.74 7zm0 18.94 7.37-5.74L21 17l-9 7-9-7 1.62-1.26z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Materias y prácticas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Introduccion_Mecatronica/" class="md-nav__link ">
+              
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 4h12v1h3v2h-3v2h3v2h-3v2h3v2h-3v2h3v2h-3v1H6v-1H3v-2h3v-2H3v-2h3v-2H3V9h3V7H3V5h3zm5 11v3h1v-3zm2 0v3h1v-3zm2 0v3h1v-3z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción a la Mecatrónica
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Introducción a la Mecatrónica
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Introduccion_Mecatronica/practica-01-introduccion-electronica/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción a la electrónica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Introduccion_Mecatronica/practica-02-programacion-arduino/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Bases de programación con Arduino
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Introduccion_Mecatronica/practica-03-entradas-digitales-esp32/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Entradas digitales con ESP32
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Introduccion_Mecatronica/practica-04-motor-tinkercad/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Control de un motor en Tinkercad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Introduccion_Mecatronica/practica-05-circuito-fisico-esp32/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Circuito físico con ESP32
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88zM12 4.15 6.04 7.5 12 10.85l5.96-3.35zM5 15.91l6 3.38v-6.71L5 9.21zm14 0v-6.7l-6 3.37v6.71z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto de Mecatrónica
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyecto de Mecatrónica
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica-01-modelado-solidworks/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción al modelado en SOLIDWORKS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica-02-soldadura/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Trabajo en el área de soldadura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica-03-cubo-ensamblable/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Diseño de un cubo ensamblable en SOLIDWORKS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica-04-carrito-formula-1/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Carrito de Fórmula 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Instrumentos y máquinas de taller
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Instrumentos y máquinas de taller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-medicion-de-bloques-de-madera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Medición de bloques de madera
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Medición de bloques de madera">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calibrador-vernier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calibrador Vernier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#micrometro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Micrómetro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-registro-de-las-dimensiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Registro de las dimensiones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Registro de las dimensiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resultados-con-calibrador-vernier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resultados con calibrador Vernier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultados-con-micrometro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resultados con micrómetro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-brocas-y-fresas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Brocas y fresas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-recorrido-por-las-maquinas-del-taller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Recorrido por las máquinas del taller
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Recorrido por las máquinas del taller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fresadora-vertical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fresadora vertical
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sierra-de-cinta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sierra de cinta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guillotina-para-lamina" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Guillotina para lámina
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dobladora-de-lamina" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dobladora de lámina
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soldadura-por-puntos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Soldadura por puntos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-aprendizajes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Aprendizajes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusión
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica-06-zorro-minecraft/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Zorro de Minecraft
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practica-07-maquinado-cnc/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm0 2h7v5h5v11H6zm2 8v2h8v-2zm0 4v2h5v-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Maquinado CNC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-medicion-de-bloques-de-madera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Medición de bloques de madera
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Medición de bloques de madera">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calibrador-vernier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calibrador Vernier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#micrometro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Micrómetro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-registro-de-las-dimensiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Registro de las dimensiones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Registro de las dimensiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resultados-con-calibrador-vernier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resultados con calibrador Vernier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultados-con-micrometro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resultados con micrómetro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-brocas-y-fresas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Brocas y fresas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-recorrido-por-las-maquinas-del-taller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Recorrido por las máquinas del taller
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Recorrido por las máquinas del taller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fresadora-vertical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fresadora vertical
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sierra-de-cinta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sierra de cinta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guillotina-para-lamina" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Guillotina para lámina
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dobladora-de-lamina" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dobladora de lámina
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soldadura-por-puntos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Soldadura por puntos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-aprendizajes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Aprendizajes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusión
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+  
+  
+    <header class="practica-cabecera color-naranja">
+      <nav class="practica-migas" aria-label="Ruta">
+        
+          <a href="../"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88zM12 4.15 6.04 7.5 12 10.85l5.96-3.35zM5 15.91l6 3.38v-6.71L5 9.21zm14 0v-6.7l-6 3.37v6.71z"/></svg>Proyecto de Mecatrónica</a>
+        
+        <span aria-hidden="true">/</span>
+        <span>Práctica 05</span>
+      </nav>
+      <div class="practica-cabecera__fila">
+        <span class="practica-numero" aria-label="Práctica número 5">
+          <small>Práctica</small>05
+        </span>
+        <div>
+          <h1>Instrumentos y máquinas de taller</h1>
+          <div class="chips">
+            <span class="chip chip--materia"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88zM12 4.15 6.04 7.5 12 10.85l5.96-3.35zM5 15.91l6 3.38v-6.71L5 9.21zm14 0v-6.7l-6 3.37v6.71z"/></svg>Proyecto de Mecatrónica</span>
+            <span class="chip"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 11h2v2H7zm14-6v14c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h1V1h2v2h8V1h2v2h1a2 2 0 0 1 2 2M5 7h14V5H5zm14 12V9H5v10zm-4-6h2v-2h-2zm-4 0h2v-2h-2z"/></svg>Primer Parcial</span>
+            
+            
+            
+            <span class="chip"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V5h14m0-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-5.04 9.29-2.75 3.54-1.96-2.36L6.5 17h11z"/></svg>17 fotos</span>
+            
+          </div>
+        </div>
+      </div>
+      
+        <div class="practica-materiales">
+          <span class="practica-materiales__titulo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 8h-3V6c0-1.1-.9-2-2-2H9c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v10h20V10c0-1.1-.9-2-2-2M9 6h6v2H9zm11 12H4v-3h2v1h2v-1h8v1h2v-1h2zm-2-5v-1h-2v1H8v-1H6v1H4v-3h16v3z"/></svg>Materiales y herramientas</span>
+          <ul><li>Calibrador Vernier</li><li>Micrómetro</li><li>Fresadora</li><li>Sierra de cinta</li><li>Guillotina</li><li>Dobladora</li><li>Soldadora por puntos</li></ul>
+        </div>
+      
+    </header>
+
+    <div class="practica-contenido">
+      <h2 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Enlace a esta sección">&para;</a></h2>
+<p>En esta práctica se conocieron los instrumentos que se usan para medir piezas y las herramientas que se emplean en los procesos de fabricación. La actividad incluyó el uso del calibrador Vernier y del micrómetro para obtener las dimensiones de bloques de madera, además de una explicación sobre el funcionamiento de distintas máquinas del taller.</p>
+<p>El objetivo fue entender la importancia de medir bien los materiales antes de trabajarlos y reconocer las funciones principales de los equipos para cortar, mecanizar, doblar y unir piezas.</p>
+<h2 id="1-medicion-de-bloques-de-madera">1. Medición de bloques de madera<a class="headerlink" href="#1-medicion-de-bloques-de-madera" title="Enlace a esta sección">&para;</a></h2>
+<p>Una de las actividades principales consistió en medir diferentes bloques de madera para conocer sus dimensiones. Para ello se usaron dos instrumentos de precisión: el calibrador Vernier y el micrómetro.</p>
+<h3 id="calibrador-vernier">Calibrador Vernier<a class="headerlink" href="#calibrador-vernier" title="Enlace a esta sección">&para;</a></h3>
+<p>Este instrumento permite medir exteriores, interiores y profundidades. Su funcionamiento se basa en una escala principal y otra deslizante, cuya lectura da la dimensión del objeto.</p>
+<p>Sirve para medir el largo, el ancho y el grosor de una pieza, y también para revisar diámetros y profundidades cuando la geometría lo permite.</p>
+<div class="galeria">
+<figure>
+<p><img loading="lazy" decoding="async" alt="Calibrador Vernier" src="../../pruebas/instrumentos-taller/05.jpg" /></p>
+<figcaption>
+<p><strong>Calibrador Vernier.</strong> Medición de un bloque de madera con la escala digital.</p>
+</figcaption>
+</figure>
+<figure>
+<p><img loading="lazy" decoding="async" alt="Medición con Vernier" src="../../pruebas/instrumentos-taller/08.jpg" /></p>
+<figcaption>
+<p><strong>Medición con Vernier.</strong> Lectura de las dimensiones de los bloques numerados.</p>
+</figcaption>
+</figure>
+</div>
+<h3 id="micrometro">Micrómetro<a class="headerlink" href="#micrometro" title="Enlace a esta sección">&para;</a></h3>
+<p>El micrómetro hace mediciones precisas con un mecanismo de tornillo. La lectura se obtiene combinando la escala del cuerpo y la del tambor giratorio. El mecanismo de ajuste permite aplicar una presión controlada sobre la pieza mientras se mide.</p>
+<p>Se usó como parte de la comparación dimensional de los bloques de madera.</p>
+<div class="galeria">
+<figure>
+<p><img loading="lazy" decoding="async" alt="Micrómetro de exteriores" src="../../pruebas/instrumentos-taller/04.jpg" /></p>
+<figcaption>
+<p><strong>Micrómetro de exteriores.</strong> Instrumento sujetando un bloque de madera.</p>
+</figcaption>
+</figure>
+<figure>
+<p><img loading="lazy" decoding="async" alt="Lectura con micrómetro" src="../../pruebas/instrumentos-taller/10.jpg" /></p>
+<figcaption>
+<p><strong>Lectura con micrómetro.</strong> Medida tomada sobre uno de los bloques.</p>
+</figcaption>
+</figure>
+<figure>
+<p><img loading="lazy" decoding="async" alt="Micrómetro sobre la mesa" src="../../pruebas/instrumentos-taller/15.jpg" /></p>
+<figcaption>
+<p><strong>Micrómetro sobre la mesa.</strong> Instrumento junto a las piezas de la práctica.</p>
+</figcaption>
+</figure>
+</div>
+<h2 id="2-registro-de-las-dimensiones">2. Registro de las dimensiones<a class="headerlink" href="#2-registro-de-las-dimensiones" title="Enlace a esta sección">&para;</a></h2>
+<p>Durante el ejercicio se registraron las medidas de los bloques identificados con números. Se tomaron tres dimensiones por pieza: largo, ancho y grosor. Los resultados se organizaron en tablas para consultarlos y compararlos con facilidad.</p>
+<h3 id="resultados-con-calibrador-vernier">Resultados con calibrador Vernier<a class="headerlink" href="#resultados-con-calibrador-vernier" title="Enlace a esta sección">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Bloque</th>
+<th style="text-align: right;">Largo (mm)</th>
+<th style="text-align: right;">Ancho (mm)</th>
+<th style="text-align: right;">Grosor (mm)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">45.62</td>
+<td style="text-align: right;">31.65</td>
+<td style="text-align: right;">32.33</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">40.57</td>
+<td style="text-align: right;">36.66</td>
+<td style="text-align: right;">18.65</td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">28.72</td>
+<td style="text-align: right;">41.69</td>
+<td style="text-align: right;">20.25</td>
+</tr>
+<tr>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">37.05</td>
+<td style="text-align: right;">29.86</td>
+<td style="text-align: right;">25.49</td>
+</tr>
+<tr>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">35.89</td>
+<td style="text-align: right;">46.92</td>
+<td style="text-align: right;">21.80</td>
+</tr>
+</tbody>
+</table>
+<h3 id="resultados-con-micrometro">Resultados con micrómetro<a class="headerlink" href="#resultados-con-micrometro" title="Enlace a esta sección">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Bloque</th>
+<th style="text-align: right;">Largo (mm)</th>
+<th style="text-align: right;">Ancho (mm)</th>
+<th style="text-align: right;">Grosor (mm)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">27.45</td>
+<td style="text-align: right;">24.11</td>
+<td style="text-align: right;">23.17</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">43.25</td>
+<td style="text-align: right;">32.27</td>
+<td style="text-align: right;">28.43</td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">29.27</td>
+<td style="text-align: right;">42.16</td>
+<td style="text-align: right;">20.25</td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">50.48</td>
+<td style="text-align: right;">47.37</td>
+<td style="text-align: right;">21.69</td>
+</tr>
+<tr>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">41.14</td>
+<td style="text-align: right;">32.21</td>
+<td style="text-align: right;">25.00</td>
+</tr>
+</tbody>
+</table>
+<p>Estos registros sirvieron para practicar la lectura de instrumentos y para ordenar las dimensiones con una unidad común. Como los bloques medidos con cada herramienta no fueron exactamente los mismos, no es posible comparar todos los resultados directamente; solo el bloque 14 aparece en las dos tablas.</p>
+<h2 id="3-brocas-y-fresas">3. Brocas y fresas<a class="headerlink" href="#3-brocas-y-fresas" title="Enlace a esta sección">&para;</a></h2>
+<p>También se revisaron las diferencias entre dos herramientas de mecanizado.</p>
+<p>La <strong>broca</strong> se usa principalmente para hacer agujeros con un movimiento de giro y avance en la dirección de la perforación. La <strong>fresa</strong> retira material para formar superficies, ranuras, rebajes y perfiles, según su geometría y el movimiento de la máquina.</p>
+<p>La elección depende de la operación, del material y del acabado que se busque. Además, la cantidad y la disposición de los filos de una fresa influyen en su funcionamiento, así que no conviene elegirla solo por el número de filos.</p>
+<div class="galeria">
+<figure>
+<p><img loading="lazy" decoding="async" alt="Broca en uso" src="../../pruebas/instrumentos-taller/09.jpg" /></p>
+<figcaption>
+<p><strong>Broca.</strong> Perforación de una pieza de madera en la fresadora.</p>
+</figcaption>
+</figure>
+<figure>
+<p><img loading="lazy" decoding="async" alt="Fresa" src="../../pruebas/instrumentos-taller/14.jpg" /></p>
+<figcaption>
+<p><strong>Fresa.</strong> Herramienta de corte para retirar material.</p>
+</figcaption>
+</figure>
+</div>
+<h2 id="4-recorrido-por-las-maquinas-del-taller">4. Recorrido por las máquinas del taller<a class="headerlink" href="#4-recorrido-por-las-maquinas-del-taller" title="Enlace a esta sección">&para;</a></h2>
+<p>Además de las mediciones, se identificaron varios equipos y se explicaron sus funciones principales. El recorrido permitió relacionar las herramientas de corte con las operaciones que se hacen al fabricar una pieza.</p>
+<h3 id="fresadora-vertical">Fresadora vertical<a class="headerlink" href="#fresadora-vertical" title="Enlace a esta sección">&para;</a></h3>
+<p>La fresadora usa una herramienta giratoria para retirar material. Sirve para hacer superficies planas, ranuras y perfiles, según la herramienta instalada y los movimientos disponibles.</p>
+<p>Durante la explicación se revisaron el ajuste de la máquina, la selección de velocidad, el encendido y la sujeción de las piezas. La pieza debe quedar firmemente asegurada, y los ajustes se hacen siguiendo las indicaciones de seguridad del taller.</p>
+<div class="galeria">
+<figure>
+<p><img loading="lazy" decoding="async" alt="Placa de la fresadora" src="../../pruebas/instrumentos-taller/06.jpg" /></p>
+<figcaption>
+<p><strong>Placa de la fresadora.</strong> Interruptor de encendido y datos de la máquina.</p>
+</figcaption>
+</figure>
+<figure>
+<p><img loading="lazy" decoding="async" alt="Vista de la fresadora" src="../../pruebas/instrumentos-taller/16.jpg" /></p>
+<figcaption>
+<p><strong>Vista de la fresadora.</strong> Cabezal y controles de velocidad.</p>
+</figcaption>
+</figure>
+<figure>
+<p><img loading="lazy" decoding="async" alt="Fresadora en operación" src="../../pruebas/instrumentos-taller/11.jpg" /></p>
+<figcaption>
+<p><strong>En operación.</strong> Encendido de la fresadora con la pieza sujeta.</p>
+</figcaption>
+</figure>
+<figure>
+<p><img loading="lazy" decoding="async" alt="Controles y recomendaciones" src="../../pruebas/instrumentos-taller/17.jpg" /></p>
+<figcaption>
+<p><strong>Controles y recomendaciones.</strong> Palancas de ajuste y carteles de seguridad del equipo.</p>
+</figcaption>
+</figure>
+</div>
+<h3 id="sierra-de-cinta">Sierra de cinta<a class="headerlink" href="#sierra-de-cinta" title="Enlace a esta sección">&para;</a></h3>
+<p>Esta máquina corta con una hoja metálica dentada que gira en forma de banda continua. Se usa para separar material siguiendo una trayectoria de corte, según las características de la máquina y de la pieza.</p>
+<p>Se explicó la secuencia general de encendido y la importancia de identificar los controles antes de usarla.</p>
+<div class="galeria galeria--una">
+<figure>
+<p><img loading="lazy" decoding="async" alt="Sierra de cinta" src="../../pruebas/instrumentos-taller/01.jpg" /></p>
+<figcaption>
+<p><strong>Sierra de cinta del taller.</strong> Equipo de corte durante la explicación.</p>
+</figcaption>
+</figure>
+</div>
+<h3 id="guillotina-para-lamina">Guillotina para lámina<a class="headerlink" href="#guillotina-para-lamina" title="Enlace a esta sección">&para;</a></h3>
+<p>La guillotina corta láminas metálicas por cizallamiento. Permite obtener cortes rectos y preparar piezas para otros procesos de fabricación.</p>
+<p>El equipo tiene límites de capacidad según el espesor y el material. En el taller se indicó un límite de 1.5 mm para la lámina trabajada.</p>
+<div class="galeria">
+<figure>
+<p><img loading="lazy" decoding="async" alt="Guillotina para lámina" src="../../pruebas/instrumentos-taller/07.jpg" /></p>
+<figcaption>
+<p><strong>Guillotina.</strong> Vista general del equipo.</p>
+</figcaption>
+</figure>
+<figure>
+<p><img loading="lazy" decoding="async" alt="Guillotina en operación" src="../../pruebas/instrumentos-taller/12.jpg" /></p>
+<figcaption>
+<p><strong>Corte de lámina.</strong> Operación de la guillotina durante el corte.</p>
+</figcaption>
+</figure>
+</div>
+<h3 id="dobladora-de-lamina">Dobladora de lámina<a class="headerlink" href="#dobladora-de-lamina" title="Enlace a esta sección">&para;</a></h3>
+<p>La dobladora cambia el ángulo de una lámina metálica aplicando una fuerza controlada. Así se forman pliegues y pestañas sin separar el material.</p>
+<p>Como en la guillotina, hay que respetar los límites de espesor del equipo y colocar bien la pieza antes de cada operación.</p>
+<div class="galeria">
+<figure>
+<p><img loading="lazy" decoding="async" alt="Dobladora de lámina" src="../../pruebas/instrumentos-taller/03.jpg" /></p>
+<figcaption>
+<p><strong>Dobladora.</strong> Vista general del equipo.</p>
+</figcaption>
+</figure>
+<figure>
+<p><img loading="lazy" decoding="async" alt="Segunda vista de la dobladora" src="../../pruebas/instrumentos-taller/13.jpg" /></p>
+<figcaption>
+<p><strong>Segunda vista.</strong> Detalle de la dobladora.</p>
+</figcaption>
+</figure>
+</div>
+<h3 id="soldadura-por-puntos">Soldadura por puntos<a class="headerlink" href="#soldadura-por-puntos" title="Enlace a esta sección">&para;</a></h3>
+<p>La soldadura por resistencia une dos láminas metálicas con presión y el paso de corriente eléctrica entre electrodos. El calor en la zona de contacto produce una unión localizada, sin material de aporte en el proceso convencional.</p>
+<p>Durante el recorrido se reconoció este equipo y su uso para unir componentes metálicos.</p>
+<div class="galeria galeria--una">
+<figure>
+<p><img loading="lazy" decoding="async" alt="Soldadora por puntos" src="../../pruebas/instrumentos-taller/02.jpg" /></p>
+<figcaption>
+<p><strong>Soldadora por puntos.</strong> Equipo de resistencia con sus electrodos.</p>
+</figcaption>
+</figure>
+</div>
+<h2 id="5-aprendizajes">5. Aprendizajes<a class="headerlink" href="#5-aprendizajes" title="Enlace a esta sección">&para;</a></h2>
+<p>La práctica mostró que medir es un paso importante antes de fabricar o modificar una pieza. Registrar las dimensiones ayuda a conocer sus características y a elegir el procedimiento adecuado.</p>
+<p>También se identificaron las diferencias entre los instrumentos de medición y las funciones de varias máquinas del taller. Cada equipo hace operaciones específicas, así que conocer sus aplicaciones y límites es necesario para trabajar de forma ordenada y segura.</p>
+<h2 id="conclusion">Conclusión<a class="headerlink" href="#conclusion" title="Enlace a esta sección">&para;</a></h2>
+<p>Esta actividad ayudó a entender mejor los instrumentos de medición y la función de las máquinas que intervienen en la fabricación. Medir los bloques con el Vernier y el micrómetro permitió practicar la lectura de ambos, y reconocer la fresadora, la sierra de cinta, la guillotina, la dobladora y la soldadora por puntos mostró distintas formas de trabajar los materiales.</p>
+<p>Aprendí que antes de fabricar una pieza hay que conocer sus dimensiones, elegir las herramientas adecuadas y entender cómo funciona cada equipo. Estos conocimientos son útiles para futuros proyectos de ingeniería y para trabajar con más precisión y seguridad.</p>
+    </div>
+
+    <nav class="practica-pager" aria-label="Otras prácticas de la materia">
+      
+        <a class="practica-pager__enlace practica-pager__enlace--prev" href="../practica-04-carrito-formula-1/">
+          <span class="practica-pager__dir"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg> Anterior · Práctica 04</span>
+          <span class="practica-pager__titulo">Carrito de Fórmula 1</span>
+        </a>
+      
+      
+        <a class="practica-pager__enlace practica-pager__enlace--next" href="../practica-06-zorro-minecraft/">
+          <span class="practica-pager__dir">Siguiente · Práctica 06 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span>
+          <span class="practica-pager__titulo">Zorro de Minecraft</span>
+        </a>
+      
+    </nav>
+    
+
+
+
+
+
+
+  
+  
+
+
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Alan Santiago · Reportes de prácticas de Mecatrónica
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/AlanSantiago77/Alan" target="_blank" rel="noopener" title="Repositorio en GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.indexes", "navigation.tracking", "search.suggest", "search.highlight", "search.share", "toc.follow", "content.code.copy", "content.code.annotate", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../../assets/js/interfaz.js"></script>
+      
+    
+  </body>
+</html>
