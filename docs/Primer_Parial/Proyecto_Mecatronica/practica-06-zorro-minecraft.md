@@ -9,7 +9,7 @@ etiquetas: [zorro, minecraft, impresión 3D, modelado]
 
 ## Descripción del proyecto
 
-En esta práctica se elaboró una figura inspirada en el zorro del videojuego Minecraft, con herramientas de diseño tridimensional y fabricación aditiva. El trabajo comenzó con la búsqueda de referencias visuales para identificar las características del personaje y reproducir su apariencia en un modelo digital.
+En esta práctica se elaboró una figura inspirada en el zorro del videojuego Minecraft, con herramientas de diseño tridimensional. El trabajo comenzó con la búsqueda de referencias visuales para identificar las características del personaje y reproducir su apariencia en un modelo digital.
 
 Después se desarrolló la figura en SOLIDWORKS y se preparó para imprimirla en 3D. Al terminar la impresión se retiraron los soportes y se pintó la figura para representar los colores del personaje.
 
@@ -59,7 +59,7 @@ En SOLIDWORKS se representó el personaje en tres dimensiones, conservando su es
 
 ### Detalles de las piezas
 
-Para unir las piezas se definieron pestañas, cajas y perforaciones con medidas precisas. Estos elementos aparecen acotados en el modelo: pestañas de 16.00 mm, encajes de 19.50 mm y perforaciones de Ø5.50 mm.
+Para unir las piezas se definieron pestañas, cajas y perforaciones con medidas precisas. Estos elementos aparecen acotados en el modelo: pestañas de 16.00 mm, encajes de 19.50 mm y perforaciones de Ø5.50 mm. Las uniones entre las piezas se hicieron con cadenas.
 
 <div class="galeria" markdown>
 
